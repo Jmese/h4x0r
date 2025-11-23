@@ -11,7 +11,18 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: h4x0r
-*/
+ */
+
+:root {
+	/* Default glow color/size for the text backlight effect */
+	--h4x0r-backlight-color: rgba(0, 122, 204, 0.35);
+	--h4x0r-backlight-size: 1.5ch;
+}
+
+.wp-site-blocks {
+	text-shadow: 0 0 calc(var(--h4x0r-backlight-size) * 0.5) var(--h4x0r-backlight-color),
+		0 0 var(--h4x0r-backlight-size) var(--h4x0r-backlight-color);
+}
 
 /* Creates a CRT screen effect on the page */
 .wp-site-blocks:after,

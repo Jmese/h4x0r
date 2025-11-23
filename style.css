@@ -19,6 +19,11 @@ Text Domain: h4x0r
 }
 
 body {
+	/* Disable anti-aliasing for pixelated text */
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: unset;
+	font-smooth: never;
+	text-rendering: optimizeSpeed;
 	background-color: #050403;
 	background-image:
 		radial-gradient(circle at 20% 20%, rgba(255, 196, 102, 0.08), transparent 55%),
@@ -44,7 +49,29 @@ body::before {
 
 .wp-site-blocks {
 	position: relative;
-	filter: brightness(1.1) saturate(120%);
+	filter: brightness(3) saturate(120%);
+	animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+	0%, 100% {
+		opacity: 1;
+	}
+	92% {
+		opacity: 1;
+	}
+	93% {
+		opacity: 0.9;
+	}
+	94% {
+		opacity: 1;
+	}
+	96% {
+		opacity: 0.95;
+	}
+	97% {
+		opacity: 1;
+	}
 }
 
 .wp-site-blocks > * {

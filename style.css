@@ -28,13 +28,28 @@ body {
 	color: var(--wp--preset--color--contrast);
 }
 
+/* Backlight glow layer behind content */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: radial-gradient(ellipse at 50% 30%,
+		var(--h4x0r-backlight-color) 0%,
+		rgba(255, 140, 0, 0.3) 25%,
+		transparent 60%);
+	filter: blur(calc(var(--h4x0r-backlight-size) * 10));
+	z-index: 0;
+	pointer-events: none;
+}
+
 .wp-site-blocks {
-	text-shadow:
-		0 0 calc(var(--h4x0r-backlight-size) * 0.3) rgba(255, 255, 255, 0.35),
-		0 0 calc(var(--h4x0r-backlight-size) * 0.6) var(--h4x0r-backlight-color),
-		0 0 calc(var(--h4x0r-backlight-size) * 1) var(--h4x0r-backlight-color),
-		0 0 calc(var(--h4x0r-backlight-size) * 1.4) rgba(255, 116, 0, 0.4);
-	filter: saturate(120%);
+	position: relative;
+	filter: brightness(1.1) saturate(120%);
+}
+
+.wp-site-blocks > * {
+	position: relative;
+	z-index: 1;
 }
 
 /* Creates a CRT screen effect on the page */

@@ -82,6 +82,45 @@
 			"dropCap": false,
 			"fontFamilies": [
 				{
+					"fontFace": [
+						{
+							"fontFamily": "Terminus Modern",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/terminus-ttf_normal_400.ttf"
+							]
+						},
+						{
+							"fontFamily": "Terminus Modern",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/terminus-ttf_italic_400.ttf"
+							]
+						},
+						{
+							"fontFamily": "Terminus Modern",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/terminus-ttf_normal_700.ttf"
+							]
+						},
+						{
+							"fontFamily": "Terminus Modern",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/terminus-ttf_italic_700.ttf"
+							]
+						}
+					],
+					"fontFamily": "\"Terminus Modern\", \"Terminus (TTF)\", \"Terminus\", monospace",
+					"name": "Terminus Modern",
+					"slug": "terminus-modern"
+				},
+				{
 					"fontFamily": "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
 					"name": "System Monospace",
 					"slug": "system-monospace"
@@ -392,7 +431,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-monospace)",
+			"fontFamily": "var(--wp--preset--font-family--terminus-modern)",
 			"fontSize": "clamp(1rem, 0.867rem + 0.5674vw, 1.25rem)",
 			"lineHeight": "2"
 		}

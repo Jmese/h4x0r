@@ -4,27 +4,27 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#F6F6F6",
+					"color": "#050403",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#1a1a1a",
+					"color": "#f5c97a",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#007acc",
+					"color": "#ffb347",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "#C03000",
+					"color": "#f26e1f",
 					"name": "Accent",
 					"slug": "accent"
 				},
 				{
-					"color": "#CBCBCB",
+					"color": "#8a6340",
 					"name": "Midtone",
 					"slug": "midtone"
 				}

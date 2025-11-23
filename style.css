@@ -1,8 +1,7 @@
 /*
-Theme Name: h4x0r
-Theme URI: https://github.com/jrtashjian/h4x0r
-Author: JR Tashjian
-Author URI: https://jrtashjian.com
+Theme Name: customRetroTheme
+Author: Jacob Meseha
+Author URI: https://jmesecom
 Description: THEME DESCRIPTION
 Requires at least: 6.1
 Tested up to: 6.1
@@ -15,13 +14,27 @@ Text Domain: h4x0r
 
 :root {
 	/* Default glow color/size for the text backlight effect */
-	--h4x0r-backlight-color: rgba(0, 122, 204, 0.35);
-	--h4x0r-backlight-size: 1.5ch;
+	--h4x0r-backlight-color: rgba(255, 179, 71, 0.95);
+	--h4x0r-backlight-size: 2.75ch;
+}
+
+body {
+	background-color: #050403;
+	background-image:
+		radial-gradient(circle at 20% 20%, rgba(255, 196, 102, 0.08), transparent 55%),
+		radial-gradient(circle at 80% 0%, rgba(255, 140, 0, 0.05), transparent 50%),
+		repeating-linear-gradient(0deg, rgba(255, 165, 79, 0.1) 0, rgba(255, 165, 79, 0.1) 1px, transparent 1px, transparent 2px);
+	background-attachment: fixed;
+	color: var(--wp--preset--color--contrast);
 }
 
 .wp-site-blocks {
-	text-shadow: 0 0 calc(var(--h4x0r-backlight-size) * 0.5) var(--h4x0r-backlight-color),
-		0 0 var(--h4x0r-backlight-size) var(--h4x0r-backlight-color);
+	text-shadow:
+		0 0 calc(var(--h4x0r-backlight-size) * 0.3) rgba(255, 255, 255, 0.35),
+		0 0 calc(var(--h4x0r-backlight-size) * 0.6) var(--h4x0r-backlight-color),
+		0 0 calc(var(--h4x0r-backlight-size) * 1) var(--h4x0r-backlight-color),
+		0 0 calc(var(--h4x0r-backlight-size) * 1.4) rgba(255, 116, 0, 0.4);
+	filter: saturate(120%);
 }
 
 /* Creates a CRT screen effect on the page */
@@ -38,12 +51,14 @@ Text Domain: h4x0r
 	z-index: 1000000;
 }
 .wp-site-blocks:after {
-	background: hsla(0, 6%, 7%, .1);
-	opacity: 0;
+	background: linear-gradient(rgba(255, 153, 0, 0.03), rgba(0, 0, 0, 0.7));
+	opacity: 1;
 }
 .wp-site-blocks:before {
-	background: linear-gradient(hsla(0, 6%, 7%, 0) 50%, rgba(0, 0, 0, .35) 0), linear-gradient(90deg, rgba(255, 0, 0, .06), rgba(0, 255, 0, .02), rgba(0, 0, 255, .06));
-	background-size: 100% 2px, 3px 100%;
+	background: linear-gradient(hsla(30, 90%, 8%, 0) 50%, rgba(0, 0, 0, .45) 0),
+		repeating-linear-gradient(90deg, rgba(255, 191, 102, 0.12), rgba(255, 191, 102, 0.12) 1px, transparent 1px, transparent 3px);
+	background-size: 100% 2px, 4px 100%;
+	mix-blend-mode: screen;
 }
 
 /* Reset font sizing */
